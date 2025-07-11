@@ -25,13 +25,13 @@ export const Home = () => {
 			<h1>Characters</h1>
 			<div className="d-flex overflow-auto gap-3 p-3">
 				{store.characters.map((char) => (
-					<CharacterCards key={char.uid} id={char.uid} name={char.name} />
+					<CharacterCards key={char.uid} uid={char.uid}  name={char.name} type="people" />
 				))}
 			</div>
 			<h1>Planets</h1>
 			<div className="d-flex overflow-auto gap-3 p-3">
 				{store.planets.map((planet) => (
-					<CharacterCards key={planet.uid} id={planet.uid} name={planet.name} />
+					<CharacterCards key={planet.uid} uid={planet.uid}  name={planet.name} type="planets" />
 				))}
 			</div>
 		</div>
