@@ -34,10 +34,11 @@ export const MoreInfo = () => {
   return (
     <div className="container mt-4">
       <h2>{info.properties.name}</h2>
-      {/* <pre>{JSON.stringify(info.properties, null, 2)}</pre> */}
       {type === "planets" ? (
         <p>
-          {info.properties.name} is a planet with a diameter of {info.properties.diameter} km. It has a climate of {info.properties.climate} and terrain described as {info.properties.terrain}. The planet has a population of {info.properties.population} and rotates once every {info.properties.rotation_period} hours.
+          {info.properties.name} is a planet with a diameter of {info.properties.diameter} km. It has a climate of {info.properties.climate} 
+          and terrain described as {info.properties.terrain}. The planet has a population of {info.properties.population} and rotates once every 
+          {info.properties.rotation_period} hours.
         </p>
       ) : (
         <>

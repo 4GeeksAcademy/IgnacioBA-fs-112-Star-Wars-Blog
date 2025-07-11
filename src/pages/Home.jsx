@@ -2,8 +2,8 @@
 
 import useGlobalReducer from "../hooks/useGlobalReducer.jsx";
 import { useState, useEffect } from "react";
-import { CharacterCards } from "../components/CharacterCards"
-import { PlanetCards } from "../components/PlanetsCards"
+import { Cards } from "../components/Cards.jsx"
+
 import { getCharacters } from "../services/starwarsServices.js";
 import { getPlanets } from "../services/starwarsServices.js";
 
@@ -25,13 +25,13 @@ export const Home = () => {
 			<h1>Characters</h1>
 			<div className="d-flex overflow-auto gap-3 p-3">
 				{store.characters.map((char) => (
-					<CharacterCards key={char.uid} uid={char.uid}  name={char.name} type="people" />
+					<Cards key={char.uid} uid={char.uid}  name={char.name} type="people" />
 				))}
 			</div>
 			<h1>Planets</h1>
 			<div className="d-flex overflow-auto gap-3 p-3">
 				{store.planets.map((planet) => (
-					<CharacterCards key={planet.uid} uid={planet.uid}  name={planet.name} type="planets" />
+					<Cards key={planet.uid} uid={planet.uid}  name={planet.name} type="planets" />
 				))}
 			</div>
 		</div>
